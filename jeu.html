@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/board.css">
+    <title>Jeu de plateau</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="startInit"> <!-- création des joueurs -->
+            <p class="bienvenue">Bienvenue !</p>
+            <div id="startInfos" class="">Nombre de joueurs : <input type ="text" id="nbPlayers"></div>
+            <button id="startGame">OK</button>
+        </div>
+
+        <div id="responsive">   
+            <div id="containerBoard">   <!-- plateau de jeu -->
+                <div id="board"></div>
+            </div>
+
+            <div id="action"></div> <!-- informations pendant les combats -->
+        </div>
+
+        <div id="playerInfos"></div>    <!-- informations sur les joueurs -->
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/cell.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/weapon.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/playGame.js"></script>
+</body>
+
+</html>

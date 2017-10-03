@@ -1,0 +1,206 @@
+body {
+	margin : auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#containerBoard {
+	position: relative;
+	overflow: hidden;
+}
+
+#board {
+	position: absolute;
+    transform: rotate(-30deg) skewX(30deg) scaleY(0.87);
+}
+
+/*mise en place du plateau et interface utilisateur---*/
+#container {
+	height : 100vh;
+	width : 100%;
+}
+
+#playerInfos {
+	text-transform: uppercase;
+	font-family: arial;
+	font-weight: bold;
+	line-height: 1.5em;
+	width : 100%;
+}
+
+.infos {
+	padding : 20px;
+}
+
+.progress {
+	width : 80%;
+	border : 1px solid black;
+}
+
+.progressPlayer {
+	width : 100%;
+	height : 20px;
+	background-color: blue;
+}
+
+#action {
+	text-transform: uppercase;
+	font-family: arial;
+	font-weight: bold;
+	padding : 20px;
+}
+
+@media(min-width: 768px){
+
+	#responsive {
+		float : right;
+		width : 75%;
+	}
+
+	#containerBoard {
+		margin : 20px;
+	}
+
+	#playerInfos {
+		width:25%;
+		float : left;
+		height : 100%;
+		padding-top : 20px;
+	}
+
+}
+
+#startInit {
+	position: absolute;
+	z-index: 5000;
+	width : 100%;
+	height : 100vh;
+	background-color: white;
+	text-transform: uppercase;
+	font-family: arial;
+	font-weight: bold;
+	padding : 20px;
+}
+
+#startInit input {
+	border : none;
+	width : 50px;
+	height : 50px;
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom : 1px solid black;
+	outline : none;
+}
+
+input.namePlayer {
+	width : 300px!important;
+	text-align: left!important;
+	padding-left : 5px!important;
+}
+
+#startInit button#startGame {
+	text-align: center;
+	width : 100px;
+	height : 50px;
+	margin-top : 20px;
+}
+
+#playerInfos input{
+	display : none;
+}
+
+input + label {
+    display: inline-block;
+    position: relative;
+    color: #eee;
+    width:20px;
+    height:20px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #aaa;
+}
+
+input:checked + label {
+  background-color: rgb(229,53,45);
+}
+
+.playerHighlight {
+	background-color: yellow;
+}
+
+.playerInfosHighlight {
+	background-color: lightgray;
+}
+
+/*board cells---------------------------------------*/
+.cells {
+	position: absolute;
+}
+
+.face {
+	position: absolute;
+}
+
+.top {
+    background: #666;
+}
+
+.left {
+    background: #999;
+    transform : skewY(-45deg);
+}
+
+.right {
+    background: #ccc;
+    transform : skewX(-45deg);
+}
+
+
+/*weapon---------------------------------------*/
+.weapon {
+	position: absolute;
+	/*transition: left 1s, top 1s;*/
+}
+
+.topWeapon {
+}
+
+.leftWeapon {
+	background: green;
+	transform : skewY(-45deg);
+}
+
+.rightWeapon {
+	background: brown;
+	transform : skewX(-45deg);
+}
+
+
+/*player----------------------------------------*/
+.player {
+	position: absolute;
+	/*transition: left 1s, top 1s;*/
+}
+
+.topPlayer {
+	background: #3e8934;
+}
+
+.leftPlayer {
+    background: #5dad53;
+    transform : skewY(-45deg);
+}
+
+.rightPlayer {
+    background: #84d17b;
+    transform : skewX(-45deg);
+}
+
+.highLight {
+	background-color: red;
+	z-index: 900;
+}
+
